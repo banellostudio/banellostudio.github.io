@@ -1,0 +1,57 @@
+/* Banello Studio / ExitWise: the game's Night Blueprint look. Fonts are bundled (OFL),
+   so the site loads nothing from other servers. */
+@font-face { font-family: "Space Grotesk"; src: url("fonts/SpaceGrotesk.ttf") format("truetype"); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+
+:root {
+  --paper: #0b1a33; --card: #0e2142; --line: #24416e; --ink: #cfe3ff; --text: #e6f1ff;
+  --muted: #8fa9cf; --cyan: #5fd4ff; --yellow: #ffd23f; --magenta: #ff4d8d; --mint: #5eead4;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--text);
+  font: 17px/1.6 "Space Grotesk", system-ui, sans-serif;
+  background-image: linear-gradient(rgba(95,212,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95,212,255,.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+a { color: var(--cyan); }
+a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 64rem; margin: 0 auto; padding: 24px 16px 56px; }
+.rec { font: 700 .75rem "Space Mono", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.rec b { color: var(--magenta); }
+header.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+header.top a { font: 700 .8rem "Space Mono", monospace; text-decoration: none; letter-spacing: .06em; }
+
+/* Landing */
+.hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: center; margin-top: 40px; }
+@media (max-width: 760px) { .hero { grid-template-columns: 1fr; gap: 28px; margin-top: 24px; } }
+.logo { width: min(100%, 420px); height: auto; display: block; margin-left: -12px; }
+.tag { font: 700 .9rem "Space Mono", monospace; color: var(--cyan); letter-spacing: .14em; margin: 8px 0 0; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.15; margin: 18px 0 12px; text-wrap: balance; }
+.lede { color: var(--ink); max-width: 36rem; }
+.soon { display: inline-block; margin-top: 18px; padding: 10px 18px; border-radius: 10px; background: var(--yellow);
+  color: #1a1300; font-weight: 700; }
+.phone { justify-self: center; width: min(100%, 300px); aspect-ratio: 9 / 16; border-radius: 28px; overflow: hidden;
+  border: 2px solid var(--cyan); box-shadow: 0 0 40px rgba(95,212,255,.25); background: #000; }
+.phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.points { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 14px; margin-top: 48px; padding: 0; list-style: none; }
+.points li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; color: var(--ink); }
+.points b { color: var(--text); display: block; margin-bottom: 2px; }
+.follow { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.follow a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px;
+  font: 700 .82rem "Space Mono", monospace; }
+.follow a:hover { border-color: var(--cyan); }
+footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem;
+  display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+/* Policy */
+.doc { max-width: 46rem; }
+.doc h1 { margin-top: 32px; }
+.doc h2 { font-size: 1.2rem; margin: 32px 0 6px; color: var(--text); }
+.doc p, .doc li { color: var(--ink); }
+.doc .meta { color: var(--muted); font-size: .9rem; }
+.todo { background: rgba(255,210,63,.15); color: var(--yellow); border-radius: 4px; padding: 0 4px; }
